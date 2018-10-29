@@ -1,2 +1,3 @@
 # vue-translate
-translate
+
+vur-translate
