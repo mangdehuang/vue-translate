@@ -1,10 +1,10 @@
 # translate
 
-> A Vue.js project
+> vue translate
 
 ## Build Setup
 
-``` bash
+```bash
 # install dependencies
 npm install
 
