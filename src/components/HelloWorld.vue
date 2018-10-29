@@ -1,5 +1,5 @@
 <template>
-  <div class="hello">
+  <div id="hello">
     <div class="title">在线翻译</div>
     <translate-form @formSubmit='formSubmit'></translate-form>
     <translate-text :tranlatedText='tranlatedText'></translate-text>
@@ -29,5 +29,11 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style lang='scss' scoped>
+#hello {
+  .title {
+    display: flex;
+    justify-content: center;
+  }
+}
 </style>
