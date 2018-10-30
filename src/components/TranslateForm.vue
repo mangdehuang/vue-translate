@@ -1,14 +1,17 @@
 <template>
-     <form @submit.stop='formSubmit'>
-      <input type="text"  v-model="inputText"  placeholder="请输入要翻译的内容"/>
-      <select v-model="defaultTranlateIndex">
+<div id="translate-form" class="container">
+ <form @submit.stop='formSubmit' role="form" class="row">
+      <input type="text"  v-model="inputText"  placeholder="请输入要翻译的内容" class="form-control col-lg-6"/>
+      <select v-model="defaultTranlateIndex" class="form-control col-lg-6">
         <option 
           v-for='(item,index) of translateList' 
           :key="index"
            :value="item.value">{{item.text}}</option>
       </select>
-      <input type="submit" value="提交">      
+      <input type="submit" value="提交" class="btn btn-primary">      
     </form>
+</div>
+    
 </template>
 <script>
 export default {
@@ -50,6 +53,10 @@ export default {
   }
 };
 </script>
-<style>
+<style lang='scss'>
+#translate-form {
+  display: flex;
+  justify-content: center;
+}
 </style>
 

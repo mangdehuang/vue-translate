@@ -1,6 +1,5 @@
 <template>
-<div id="translateText">
-  <div>翻译后内容</div>
+<div id="translate-text">
   <div>{{tranlatedText}}</div>
 </div>
   
@@ -13,6 +12,10 @@ export default {
   }
 };
 </script>
-<style>
+<style lang='scss'scoped>
+#translate-text {
+  display: flex;
+  justify-content: center;
+}
 </style>
 
