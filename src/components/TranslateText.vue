@@ -14,8 +14,8 @@ export default {
 </script>
 <style lang='scss'scoped>
 #translate-text {
-  display: flex;
-  justify-content: center;
+  // display: flex;
+  // justify-content: center;
 }
 </style>
 

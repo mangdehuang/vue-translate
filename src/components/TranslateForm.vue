@@ -1,15 +1,28 @@
 <template>
-<div id="translate-form" class="container">
- <form @submit.stop='formSubmit' role="form" class="row">
-      <input type="text"  v-model="inputText"  placeholder="请输入要翻译的内容" class="form-control col-lg-6"/>
-      <select v-model="defaultTranlateIndex" class="form-control col-lg-6">
-        <option 
-          v-for='(item,index) of translateList' 
-          :key="index"
-           :value="item.value">{{item.text}}</option>
-      </select>
-      <input type="submit" value="提交" class="btn btn-primary">      
+<div id="translate-form">
+ <form @submit.stop='formSubmit' role="form" class="form-horizontal">
+      <div class="form-group">
+          <label for="name" class="col-lg-offset-2  col-md-offset-2 col-lg-3 col-md-3 col-sm-2 control-label">翻译内容</label>
+          <div class="col-lg-3 col-sm-5">
+            <input type="text"  v-model="inputText"  id='name' placeholder="请输入要翻译的内容" class="form-control"/>
+          </div>
+      </div>
+      <div class="form-group" >
+          <label for="translateType"  class="col-lg-offset-2  col-md-offset-2 col-lg-3 col-md-3 col-sm-2 control-label">语言选择</label>
+          <div class="col-lg-3 col-sm-5">
+             <select v-model="defaultTranlateIndex" id='translateType' class="form-control col-lg-6">
+                <option 
+                  v-for='(item,index) of translateList' 
+                  :key="index"
+                  :value="item.value">{{item.text}}</option>
+            </select>
+          </div>
+      </div>
+      <div class="form-group">
+        <input type="submit" value="提交" class="btn btn-primary  col-lg-offset-5 col-md-offset-6 col-sm-offset-6">      
+      </div>
     </form>
+    
 </div>
     
 </template>
@@ -55,8 +68,6 @@ export default {
 </script>
 <style lang='scss'>
 #translate-form {
-  display: flex;
-  justify-content: center;
 }
 </style>
 
